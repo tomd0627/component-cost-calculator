@@ -184,7 +184,7 @@
 
 .trHighlighted .tdLabel,
 .trHighlighted .tdTotal {
-  color: var(--color-accent-hover);
+  color: var(--color-accent);   /* #047857 light / #059669 dark — passes AA */
 }
 
 .cheapestBadge {

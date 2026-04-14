@@ -26,7 +26,7 @@ export function AuditCard({ results }: AuditCardProps) {
           <h3 className={styles.cardTitle}>Component Library Cost Estimate</h3>
           <p className={styles.cardMeta}>Generated {formatTimestamp(generatedAt)}</p>
         </div>
-        <div className={styles.stamp}>
+        <div className={styles.stamp} aria-hidden="true">
           componentcostcalculator
         </div>
       </div>
@@ -111,9 +111,9 @@ export function AuditCard({ results }: AuditCardProps) {
 
       {/* Disclaimer */}
       <p className={styles.disclaimer}>
-        Estimates based on: Deque Systems (2023), Nielsen Norman Group Design Systems ROI (2022),
-        WebAIM Million Report (2024), Smashing Magazine Design Systems Handbook (2021).
-        Actual costs will vary based on team velocity, component complexity, and tooling.
+        Estimates based on: Deque Systems, Nielsen Norman Group, WebAIM Million Report,
+        and the InVision Design Systems Handbook. Figures are industry averages — actual
+        costs will vary based on team velocity, component complexity, and tooling.
       </p>
     </div>
   );
