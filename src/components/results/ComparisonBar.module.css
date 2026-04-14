@@ -1,27 +1,46 @@
 .wrapper {
-  width: 100%;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
 
-.svg {
-  width: 100%;
-  height: auto;
-  display: block;
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.rowHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
 }
 
 .label {
-  font-family: var(--font-sans);
-  font-size: 11px;
-  fill: var(--color-text-muted);
-}
-
-.track {
-  fill: var(--color-surface-raised);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  min-width: 0;
 }
 
 .value {
-  font-family: var(--font-sans);
-  font-size: 11px;
+  font-size: var(--text-sm);
   font-weight: 600;
-  fill: var(--color-text-base);
+  color: var(--color-text-base);
+  flex-shrink: 0;
+}
+
+.track {
+  height: 28px;
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  border-radius: var(--radius-sm);
+  opacity: 0.85;
+  transition: width var(--transition-slow);
+  min-width: 4px;
 }

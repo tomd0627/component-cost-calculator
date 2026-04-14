@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Outfit } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { Header } from "@/components/layout/Header";
@@ -17,6 +17,10 @@ const outfit = Outfit({
   variable: "--font-outfit",
   weight: ["600", "700", "800"],
 });
+
+export const viewport: Viewport = {
+  colorScheme: "dark light",
+};
 
 export const metadata: Metadata = {
   title: "Component Cost Calculator",
@@ -58,12 +62,24 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      // Default dark; ThemeProvider switches this attribute client-side.
+      // Default dark; the inline script below overwrites this before paint.
       data-theme="dark"
       className={`${inter.variable} ${outfit.variable}`}
       suppressHydrationWarning
     >
-      <body>
+      <head>
+        {/*
+          Runs synchronously before any paint so the correct data-theme is
+          applied before CSS is rendered — eliminating the dark→light flash.
+          suppressHydrationWarning on <html> handles any SSR/client mismatch.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('ccc-theme');var p=t||(window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',p);document.documentElement.classList.add('no-transitions')}catch(e){}})()`,
+          }}
+        />
+      </head>
+      <body suppressHydrationWarning>
         <ThemeProvider>
           <a href="#main-content" className="skip-nav">
             Skip to main content

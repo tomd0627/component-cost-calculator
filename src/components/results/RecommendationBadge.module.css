@@ -37,6 +37,6 @@
 
 .enterprise {
   background: rgba(167, 139, 250, 0.12);
-  color: #a78bfa;
+  color: var(--color-path-commercial);   /* #a78bfa dark / #7c3aed light — contrast-safe in both themes */
   border: 1px solid rgba(167, 139, 250, 0.25);
 }

@@ -11,8 +11,9 @@
   border-bottom: none;
 }
 
-.muted {
-  opacity: 0.45;
+.muted .value {
+  /* Use the muted token instead of opacity so contrast stays AA-compliant. */
+  color: var(--color-text-muted);
 }
 
 .labelGroup {

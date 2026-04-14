@@ -4,19 +4,19 @@ import styles from "./Footer.module.css";
 const SOURCES = [
   {
     label: "Deque Systems — Business Case for Accessibility",
-    href: "https://www.deque.com/blog/the-business-case-for-digital-accessibility/",
+    href: "https://www.deque.com/blog/the-business-case-for-accessibility/",
   },
   {
     label: "WebAIM Million Report",
     href: "https://webaim.org/projects/million/",
   },
   {
-    label: "Nielsen Norman Group — Design Systems ROI",
-    href: "https://www.nngroup.com/articles/design-systems-roi/",
+    label: "Nielsen Norman Group — Design Systems 101",
+    href: "https://www.nngroup.com/articles/design-systems-101/",
   },
   {
-    label: "Smashing Magazine — Design Systems Handbook",
-    href: "https://www.designbetter.co/design-systems-handbook",
+    label: "InVision — Design Systems Handbook",
+    href: "https://designbetterpodcast.com/p/design-systems-handbook",
   },
 ];
 

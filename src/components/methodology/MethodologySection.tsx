@@ -26,8 +26,8 @@ export function MethodologySection() {
             <p className={styles.blockText}>
               Base hours per component from scratch: <strong>16 hrs</strong> — covering spec review,
               implementation, Storybook story, and unit tests. Source:{" "}
-              <a href="https://www.nngroup.com/articles/design-systems-roi/" target="_blank" rel="noopener noreferrer">
-                Nielsen Norman Group Design Systems ROI (2022)
+              <a href="https://www.nngroup.com/articles/design-systems-101/" target="_blank" rel="noopener noreferrer">
+                Nielsen Norman Group — Design Systems 101
               </a>.
             </p>
             <ul className={styles.list}>
@@ -43,8 +43,8 @@ export function MethodologySection() {
               A11y remediation hours are calculated as a fraction of the <em>full scratch dev hours</em> —
               not the reduced hours — because accessibility complexity is a function of component
               behaviour, not how the code was sourced. Source:{" "}
-              <a href="https://www.deque.com/blog/the-business-case-for-digital-accessibility/" target="_blank" rel="noopener noreferrer">
-                Deque Systems, &ldquo;The Business Case for Digital Accessibility&rdquo; (2023)
+              <a href="https://www.deque.com/blog/the-business-case-for-accessibility/" target="_blank" rel="noopener noreferrer">
+                Deque Systems, &ldquo;The Business Case for Accessibility&rdquo;
               </a>.
             </p>
             <table className={styles.table}>
@@ -95,8 +95,8 @@ export function MethodologySection() {
             <p className={styles.blockText}>
               QA hours = <code>total dev hours × 0.4 × (QA headcount / team size)</code>.
               The 0.4 ratio is a mid-range estimate from{" "}
-              <a href="https://www.designbetter.co/design-systems-handbook" target="_blank" rel="noopener noreferrer">
-                the Smashing Magazine Design Systems Handbook
+              <a href="https://designbetterpodcast.com/p/design-systems-handbook" target="_blank" rel="noopener noreferrer">
+                the InVision Design Systems Handbook
               </a>.
             </p>
           </div>
@@ -130,6 +130,8 @@ export function MethodologySection() {
               <li>Component complexity varies widely — a date picker costs far more than a badge. These estimates represent a library-wide average.</li>
               <li>The model does not account for existing in-house design system tooling, company-specific toolchains, or significant tech debt.</li>
               <li>Commercial library quality varies. Some vendors have excellent accessibility (Telerik); others require significant remediation. The 18% WCAG AA fraction is a conservative average.</li>
+              <li>Hour and cost figures are industry averages drawn from published research and practitioner surveys — not guarantees. Your team&rsquo;s actual velocity may differ significantly based on experience, tooling, and codebase maturity.</li>
+              <li>Source articles are third-party publications and may be updated or removed over time. All figures and links were last verified April 2026.</li>
             </ul>
           </div>
         </div>
