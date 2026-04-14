@@ -32,6 +32,9 @@
   --color-accent-2-subtle:  rgba(59, 130, 246, 0.12);
   --color-accent-2-border:  rgba(59, 130, 246, 0.30);
 
+  /* ── Accent text on tinted surfaces ─────────────────────── */
+  --color-accent-text:    #10b981;   /* 5.3:1 on double-stacked dark tint — AA */
+
   /* ── Focus ring ──────────────────────────────────────────── */
   --color-focus:          #10b981;   /* 4.78:1 on --color-bg — AA */
 
@@ -124,6 +127,8 @@
   --color-accent-2-hover:   #3b82f6;
   --color-accent-2-subtle:  rgba(37, 99, 235, 0.08);
   --color-accent-2-border:  rgba(37, 99, 235, 0.25);
+
+  --color-accent-text:    #065f46;   /* emerald-900: 6.2:1 on double-stacked light tint — AA */
 
   --color-focus:          #047857;
 
